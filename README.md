@@ -1,5 +1,8 @@
-# Wear-JcCast
+# Wear JcCast
 A jetpack compose app for wearOs used as chromecast client 
+
+Why we have this project ?
+In this project we will create some of the UX examples in wearOs using jetpack compose wearOs APIs
 
 Login Screen only have QR option right now
 
