@@ -1,24 +1,22 @@
 package com.techlads.wearjccast.presentation.home
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.wear.compose.material.MaterialTheme
-import androidx.wear.compose.material.Text
+import androidx.wear.compose.material.ScalingLazyColumn
+import com.techlads.wearjccast.R
+import com.techlads.wearjccast.presentation.home.data.Movie
 
 @Composable
 fun HomeScreen() {
-    Text(
-        modifier = Modifier.fillMaxWidth(),
-        textAlign = TextAlign.Center,
-        color = MaterialTheme.colors.primary,
-        text = "Welcome"
-    )
+    ScalingLazyColumn {
+        items(20) {
+            MovieItem(payload = Movie("Movie $it", "url", R.drawable.a_6))
+        }
+    }
 }
 
-@Preview
+@Preview(device = Devices.WEAR_OS_SMALL_ROUND, showSystemUi = true)
 @Composable
 fun HomeScreenPrev() {
     HomeScreen()
